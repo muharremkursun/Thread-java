@@ -1,0 +1,29 @@
+-								PROGRAMIN GENEL YAPTIÐI ÝÞ
+
+- Program bir diziyi ikiye bölerek dizinin bir yarýsýný bir Thread ile diðer yarýsýný baþka bir
+- Thread ile topluyor ve ekrana basýyor en son olarakta bu iki toplamý toplayýp ekrana basýyor.
+							
+							   KODUN AÇIKLAMASI
+							   
+                               Toplama SINIFI	
+                               						
+- Toplama diye bir sýnýfýmýz var.
+- Bu toplama sýnýfýnýn 3 tane parametre alan bir constructor'ý var.
+- Bu parametrelerin ilki int []dizi paremetresidir.
+- Bu parametre dizi türünden bir deðiþken ister.
+- ikinci parametre  int ilk dizinin toplamaya baþlayacaðýmýz ilk indisini alýr.
+- üçüncü parametre int son dizinin toplanacak indisini alýr.
+- yani dizinin toplamyý nereye kadar toplanacaðýný belirler.
+- Toplama sýnýfý Runnnable sýnýfýný implements ediyor.
+- implemenst ettiði için run() metodunu Override ediyoruz.
+- run() metodu Thread start() metodu ile baþlatýldýðýnda otomatik kendiliðinden tetiklenir.
+- run() metoduda topla() metodunu tetikliyor.
+- topla() metodu ilk ve son deðerleri arasýnda kalan indisleri toplam deiþkeni ile topluyor.
+- son olarak sonuc() metodu ise bu sonucu almamýzý saðlýyor.
+							   
+							   AnaSinif SINIFI
+							   					   							
+- AnaSinif sýnýfýnda iki tane Toplama sýnýfý nesnesi oluþturdum(tp1,tp2).
+- Bu nesneleri (t1 ,t2) oluþturduðum Thread nesnelerine parametre olarak verdim.
+- tp1 ve tp2 nesnelerinin sonuc() methodundaki degerlerini topladým.
+- Sonra genel toplamý ekrana yadýrdým.
